@@ -1,0 +1,25 @@
+CREATE TABLE shirts (
+    shirt_id INT NOT NULL AUTO_INCREMENT,
+    article VARCHAR(50),
+    color VARCHAR(50),
+    shirt_size VARCHAR(50),
+    last_worn INT,
+    PRIMARY KEY(shirt_id)
+);
+INSERT INTO shirts (article, color, shirt_size, last_worn)
+VALUES ()
+
+INSERT INTO shirts (article, color, shirt_size, last_worn)
+VALUES ('polo shirt', 'Purple', 'M', 50);
+
+SELECT article,color FROM shirts;
+SELECT article, color, shirt_size, last_worn FROM shirts WHERE shirt_size='M';
+
+UPDATE shirts SET shirt_size='L' WHERE article='polo shirt'; 
+UPDATE shirts SET last_worn=0 WHERE last_worn=15;
+UPDATE shirts SET shirt_size='XS', color='off-white' WHERE color='white';
+
+DELETE FROM shirts WHERE last_worn = 200;
+DELETE FROM shirts WHERE article='tank top';
+DELETE FROM shirts;
+DROP TABLE shirts;
